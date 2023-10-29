@@ -22,7 +22,7 @@ public class Element implements Configurator {
 
     public void initialize() {
         if(!loadConfigure()) {
-            typeElement = TypeElement.TILE_SERVICE;
+            typeElement = TypeElement.MAIN_HANDLER;
             identification = new HashMap<>() {{
                 put("id","1");
                 put("imei", "tile_service_1");
