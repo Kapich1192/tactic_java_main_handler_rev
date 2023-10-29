@@ -1,12 +1,13 @@
 package com.tactic.tactic_main_handler.models.dto.elements;
 
-import com.tactic.tactic_tile_service.services.configurator.Configurator;
-import com.tactic.tactic_tile_service.services.tile_counter.TileCounter;
+
+
+import com.tactic.tactic_main_handler.services.configurator.Configurator;
 
 import java.util.HashMap;
 import java.util.Objects;
 
-public class Element implements Configurator, TileCounter {
+public class Element implements Configurator {
     private TypeElement typeElement;
     private HashMap<String,String> identification;
     private HashMap<String,String> settings;
@@ -24,23 +25,22 @@ public class Element implements Configurator, TileCounter {
             typeElement = TypeElement.TILE_SERVICE;
             identification = new HashMap<>() {{
                 put("id","1");
-                put("imei","tile_service_1");
+                put("imei", "tile_service_1");
             }};
             settings = new HashMap<>() {{
                 put("ip","localhost");
-                put("port","8090");
-                put("path_saver","tiles");
-                put("path_downloader","tiles");
+                put("port","8081");
                 put("integration","false");
                 put("server_ip_cn","localhost");
                 put("server_port_cn","8082");
+                put("server_ip_ic","localhost");
+                put("server_port_ic","8083");
                 put("print_monitoring","false");
                 put("print_downloader","false");
                 put("print_system","false");
                 put("logger","false");
                 put("terminal_mode","false");
                 put("lang","RU");
-                put("tile_server","true");
             }};
             initConfigure();
         }
