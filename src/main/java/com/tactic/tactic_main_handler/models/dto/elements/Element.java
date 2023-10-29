@@ -25,7 +25,7 @@ public class Element implements Configurator {
             typeElement = TypeElement.MAIN_HANDLER;
             identification = new HashMap<>() {{
                 put("id","1");
-                put("imei", "tile_service_1");
+                put("imei", "main_handler_1");
             }};
             settings = new HashMap<>() {{
                 put("ip","localhost");
